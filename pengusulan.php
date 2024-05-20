@@ -38,8 +38,7 @@
         <div class="flapt-sidemenu-wrapper">
             <!-- Desktop Logo -->
             <div class="flapt-logo">
-                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img
-                        class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
             </div>
 
             <!-- Side Nav -->
@@ -50,8 +49,7 @@
                     <nav>
                         <ul class="sidebar-menu" data-widget="tree">
                             <li class="menu-header-title">Dashboard</li>
-                            <li class="px-0 py-1"><a href="index.php"><i
-                                        class='bx bx-home-heart'></i><span>Dashboard</span></a></li>
+                            <li class="px-0 py-1"><a href="index.php"><i class='bx bx-home-heart'></i><span>Dashboard</span></a></li>
                             <li class="px-0 py-1 active">
                                 <a href="#">
                                     <div class="d-flex justify-content-center w-100">
@@ -123,9 +121,7 @@
                     <ul class="right-side-content d-flex align-items-center">
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><span><i
-                                        class='bx bx-world'></i></span></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class='bx bx-world'></i></span></button>
                             <div class="dropdown-menu language-dropdown dropdown-menu-right">
                                 <div class="user-profile-area">
                                     <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f1.jpg" alt="Image">
@@ -141,8 +137,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><i class='bx bx-envelope'></i></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-envelope'></i></button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- Message Area -->
                                 <div class="top-message-area">
@@ -200,9 +195,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><i class='bx bx-bell bx-tada'></i> <span
-                                    class="active-status"></span></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-bell bx-tada'></i> <span class="active-status"></span></button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- Top Notifications Area -->
                                 <div class="top-notifications-area">
@@ -259,20 +252,14 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><img src="img/bg-img/person_1.jpg"
-                                    alt=""></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/bg-img/person_1.jpg" alt=""></button>
                             <div class="dropdown-menu profile dropdown-menu-right">
                                 <!-- User Profile Area -->
                                 <div class="user-profile-area">
-                                    <a href="#" class="dropdown-item"><i class="bx bx-user font-15"
-                                            aria-hidden="true"></i> My profile</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15"
-                                            aria-hidden="true"></i> My wallet</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15"
-                                            aria-hidden="true"></i> settings</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15"
-                                            aria-hidden="true"></i> Sign-out</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-user font-15" aria-hidden="true"></i> My profile</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15" aria-hidden="true"></i> My wallet</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15" aria-hidden="true"></i> settings</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15" aria-hidden="true"></i> Sign-out</a>
                                 </div>
                             </div>
                         </li>
@@ -359,7 +346,6 @@
 
         const db = firebase.firestore();
 
-        // Function to fetch proposal data from Firestore
         function fetchProposalData() {
             const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
             proposalTable.innerHTML = ''; // Clear previous data
@@ -398,12 +384,14 @@
                                 // Render the table row for the current proposal
                                 renderProposalRow(proposalData.length, proposal, recipientData, individualData, surveyData, doc.id);
 
-                                // Add event listener for detail button
-                                const detailButton = document.querySelector(`button[data-proposal-id="${doc.id}"]`);
-                                detailButton.addEventListener('click', function () {
-                                    // Redirect to detail.html with proposal ID as parameter
-                                    window.location.href = `/detail.html?id=${doc.id}`;
-                                });
+                                // // Add event listener for detail button
+                                // const detailButton = document.querySelector(`button[data-proposal-id="${doc.id}"]`);
+                                // detailButton.addEventListener('click', function() {
+                                //     const detailUrl = `/detail.php/${doc.id}`;
+                                //     console.log(`Redirecting to: ${detailUrl}`);
+                                //     // Redirect to detail.html with proposal ID as parameter
+                                //     window.location.href = detailUrl;
+                                // });
                             });
                         });
                     });
@@ -431,16 +419,22 @@
             const row = proposalTable.insertRow();
             console.log(id);
             row.innerHTML = `
-        <td>${index}</td>
-        <td>${recipient.NAMA}</td>
-        <td>${recipient.NIK}</td>
-        <td>${proposal.disabilitas}</td>
-        <td>${proposal.programBansos}</td>
-        <td>${recipient['STATUS DTKS']}</td>
-        <td>
-            <button class="btn btn-primary p-2 detail-button" data-proposal-id="${id}">Detail</button>
-        </td>
-    `;
+                <td>${index}</td>
+                <td>${recipient.nama}</td>
+                <td>${recipient.nik}</td>
+                <td>${proposal.disabilitas}</td>
+                <td>${proposal.programBansos}</td>
+                <td>${recipient['status_dtks']}</td>
+                <td>
+                    <button class="btn btn-primary p-2 detail-button" data-proposal-id="${id}">Detail</button>
+                </td>
+                `;
+            // Add event listener for detail button
+            const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
+            detailButton.addEventListener('click', function() {
+                // Redirect to detail.php with proposal ID as parameter
+                window.location.href = `detail.php?id=${id}`;
+            });
         }
 
         // Call the function to fetch proposal data when the DOM content is loaded

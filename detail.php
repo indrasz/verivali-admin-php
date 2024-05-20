@@ -38,8 +38,7 @@
         <div class="flapt-sidemenu-wrapper">
             <!-- Desktop Logo -->
             <div class="flapt-logo">
-                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img
-                        class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
             </div>
 
             <!-- Side Nav -->
@@ -50,8 +49,7 @@
                     <nav>
                         <ul class="sidebar-menu" data-widget="tree">
                             <li class="menu-header-title">Dashboard</li>
-                            <li class="px-0 py-1"><a href="index.html"><i
-                                        class='bx bx-home-heart'></i><span>Dashboard</span></a></li>
+                            <li class="px-0 py-1"><a href="index.php"><i class='bx bx-home-heart'></i><span>Dashboard</span></a></li>
                             <li class="px-0 py-1 active">
                                 <a href="#">
                                     <div class="d-flex justify-content-center w-100">
@@ -62,7 +60,7 @@
                             </li>
 
                             <li class="px-0 py-1">
-                                <a href="tanggapan.html">
+                                <a href="tanggapan.php">
                                     <div class="d-flex justify-content-center w-100">
                                         <i class='bx bx-file'></i>
                                         <span>Tanggapan</span>
@@ -71,7 +69,7 @@
                             </li>
 
                             <li class="px-0 py-1">
-                                <a href="manajemen-data.html">
+                                <a href="manajemen-data.php">
                                     <div class="d-flex justify-content-center w-100">
                                         <i class='bx bx-group'></i>
                                         <span>Manajemen Data</span>
@@ -123,9 +121,7 @@
                     <ul class="right-side-content d-flex align-items-center">
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><span><i
-                                        class='bx bx-world'></i></span></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class='bx bx-world'></i></span></button>
                             <div class="dropdown-menu language-dropdown dropdown-menu-right">
                                 <div class="user-profile-area">
                                     <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f1.jpg" alt="Image">
@@ -141,8 +137,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><i class='bx bx-envelope'></i></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-envelope'></i></button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- Message Area -->
                                 <div class="top-message-area">
@@ -200,9 +195,7 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><i class='bx bx-bell bx-tada'></i> <span
-                                    class="active-status"></span></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-bell bx-tada'></i> <span class="active-status"></span></button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- Top Notifications Area -->
                                 <div class="top-notifications-area">
@@ -259,20 +252,14 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><img src="img/bg-img/person_1.jpg"
-                                    alt=""></button>
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/bg-img/person_1.jpg" alt=""></button>
                             <div class="dropdown-menu profile dropdown-menu-right">
                                 <!-- User Profile Area -->
                                 <div class="user-profile-area">
-                                    <a href="#" class="dropdown-item"><i class="bx bx-user font-15"
-                                            aria-hidden="true"></i> My profile</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15"
-                                            aria-hidden="true"></i> My wallet</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15"
-                                            aria-hidden="true"></i> settings</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15"
-                                            aria-hidden="true"></i> Sign-out</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-user font-15" aria-hidden="true"></i> My profile</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15" aria-hidden="true"></i> My wallet</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15" aria-hidden="true"></i> settings</a>
+                                    <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15" aria-hidden="true"></i> Sign-out</a>
                                 </div>
                             </div>
                         </li>
@@ -280,6 +267,46 @@
                 </div>
             </header>
 
+            <?php
+            // Include your database connection file
+            // include 'firebase_config.php';
+
+            // Function to fetch data from Firestore
+            // function getDataById($collectionName, $documentId)
+            // {
+            //     global $firestoreClient;
+            //     $collectionReference = $firestoreClient->collection($collectionName);
+            //     $documentReference = $collectionReference->document($documentId);
+            //     $snapshot = $documentReference->snapshot();
+
+            //     if ($snapshot->exists()) {
+            //         return $snapshot->data();
+            //     } else {
+            //         return null;
+            //     }
+            // }
+
+            // Fetch the proposal ID from the URL
+            $proposalId = isset($_GET['id']) ? $_GET['id'] : null;
+
+            // if ($proposalId) {
+            //     // Get proposal data
+            //     $proposal = getDataById('proposals', $proposalId);
+
+            //     if ($proposal) {
+            //         // Get recipient, individual, and survey data
+            //         $recipient = getDataById('recipients', $proposal['idRecipient']);
+            //         $individual = getDataById('individuals', $proposal['idIndividual']);
+            //         $survey = getDataById('surveys', $proposal['idSurvey']);
+            //     } else {
+            //         echo "Proposal not found.";
+            //         exit;
+            //     }
+            // } else {
+            //     echo "No proposal ID specified.";
+            //     exit;
+            // }
+            ?>
             <!-- Body Content -->
             <div class="main-panel">
                 <div class="content-wrapper">
@@ -304,7 +331,7 @@
                                                         NIK
                                                     </h6>
                                                 </div>
-                                                <div class="col-auto" id="nik"></div>
+                                                <div class="col-auto" id="nikData"></div>
                                             </div>
                                             <hr class="my-3">
                                             <div class="row align-items-center">
@@ -358,7 +385,7 @@
                                                         Kecamatan
                                                     </h6>
                                                 </div>
-                                                <div class="col-auto" id="kecamatan"></div>
+                                                <div class="col-auto" id="kecamatanData"></div>
                                             </div>
                                             <hr class="my-3">
                                             <div class="row align-items-center">
@@ -757,27 +784,27 @@
                         function fillRecipientData(recipientData) {
                             // Ambil elemen-elemen HTML yang akan diisi dengan data penerima
                             const namaElement = document.querySelector('#nama');
-                            const nikElement = document.querySelector('#nik');
+                            const nikElement = document.querySelector('#nikData');
                             const alamatElement = document.querySelector('#alamat');
                             const tanggalLahirElement = document.querySelector('#tanggalLahir');
                             const umurElement = document.querySelector('#umur');
                             const desaElement = document.querySelector('#desa');
                             const kabupatenElement = document.querySelector('#kabupaten');
-                            const kecamatanElement = document.querySelector('#kecamatan');
+                            const kecamatanElement = document.querySelector('#kecamatanData');
                             const bansosElement = document.querySelector('#bansos');
                             const statusDtkElement = document.querySelector('#statusDtk');
 
                             // Isi elemen-elemen HTML dengan data penerima
-                            namaElement.textContent = recipientData.NAMA;
-                            nikElement.textContent = recipientData.NIK;
-                            alamatElement.textContent = recipientData.ALAMAT;
-                            tanggalLahirElement.textContent = recipientData['TANGGAL LAHIR'];
-                            umurElement.textContent = recipientData.UMUR;
-                            desaElement.textContent = recipientData.DESA;
-                            kabupatenElement.textContent = recipientData.KABUPATEN;
-                            kecamatanElement.textContent = recipientData.KECAMATAN;
-                            bansosElement.textContent = recipientData.BANSOS;
-                            statusDtkElement.textContent = recipientData['STATUS DTKS'];
+                            namaElement.textContent = recipientData.nama;
+                            nikElement.textContent = recipientData.nik;
+                            alamatElement.textContent = recipientData.alamat;
+                            tanggalLahirElement.textContent = recipientData['tanggal_lahir'];
+                            umurElement.textContent = recipientData.umur;
+                            desaElement.textContent = recipientData.desa;
+                            kabupatenElement.textContent = recipientData.kabupaten;
+                            kecamatanElement.textContent = recipientData.kecamatan;
+                            bansosElement.textContent = recipientData.bansos;
+                            statusDtkElement.textContent = recipientData['status_dtks'];
                         }
 
                         // Panggil fungsi fillRecipientData dengan data penerima yang diperoleh
@@ -877,8 +904,6 @@
         });
 
         // Fungsi untuk menambahkan data penerima ke dalam elemen HTML
-
-
     </script>
 
 </body>
