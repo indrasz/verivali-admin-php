@@ -38,7 +38,7 @@
         <div class="flapt-sidemenu-wrapper">
             <!-- Desktop Logo -->
             <div class="flapt-logo">
-                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                <a href="index.php"><img class="desktop-logo" src="img/verivali-logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/verivali-logo.png alt=" Mobile Logo"></a>
             </div>
 
             <!-- Side Nav -->
@@ -49,7 +49,7 @@
                     <nav>
                         <ul class="sidebar-menu" data-widget="tree">
                             <li class="menu-header-title">Dashboard</li>
-                            <li class="px-0 py-1"><a href="index.php"><i class='bx bx-home-heart'></i><span>Dashboard</span></a></li>
+                            <li class=""><a href="index.php"><i class='bx bx-home-heart'></i><span>Dashboard</span></a></li>
                             <li class="px-0 py-1">
                                 <a href="pengusulan.php">
                                     <div class="d-flex justify-content-center w-100">
@@ -60,10 +60,10 @@
                             </li>
 
                             <li class="px-0 py-1 active">
-                                <a href="#">
+                                <a href="tanggapan.php">
                                     <div class="d-flex justify-content-center w-100">
                                         <i class='bx bx-file'></i>
-                                        <span>Tanggapan</span>
+                                        <span>Verifikasi</span>
                                     </div>
                                 </a>
                             </li>
@@ -89,7 +89,7 @@
                 <div class="left-side-content-area d-flex align-items-center">
                     <!-- Mobile Logo -->
                     <div class="mobile-logo">
-                        <a href="index.html"><img src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                        <a href="index.php"><img src="img/verivali-logo.png" alt="Mobile Logo"></a>
                     </div>
 
                     <!-- Triggers -->
@@ -101,169 +101,6 @@
                             <i class='bx bx-grid-alt'></i>
                         </div>
                     </div>
-
-                    <!-- Left Side Nav -->
-                    <ul class="left-side-navbar d-flex align-items-center">
-                        <li class="hide-phone app-search">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="bx bx-search-alt"></span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="right-side-navbar d-flex align-items-center justify-content-end">
-                    <!-- Mobile Trigger -->
-                    <div class="right-side-trigger" id="rightSideTrigger">
-                        <i class='bx bx-menu-alt-right'></i>
-                    </div>
-
-                    <!-- Top Bar Nav -->
-                    <ul class="right-side-content d-flex align-items-center">
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class='bx bx-world'></i></span></button>
-                            <div class="dropdown-menu language-dropdown dropdown-menu-right">
-                                <div class="user-profile-area">
-                                    <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f1.jpg" alt="Image">
-                                        <span>Ind</span></a>
-                                    <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f2.jpg" alt="Image">
-                                        <span>German</span></a>
-                                    <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f3.jpg" alt="Image">
-                                        <span>Italian</span></a>
-                                    <a href="#" class="dropdown-item"><img src="img/core-img/f4.jpg" alt="Image">
-                                        <span>Russian</span></a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-envelope'></i></button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- Message Area -->
-                                <div class="top-message-area">
-                                    <!-- Heading -->
-                                    <div class="message-heading">
-                                        <div class="heading-title">
-                                            <h6 class="mb-0">All Messages</h6>
-                                        </div>
-                                        <span>10</span>
-                                    </div>
-
-                                    <div class="message-box" id="messageBox">
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-dollar-circle'></i>
-                                            <div>
-                                                <span>Did you know?</span>
-                                                <p class="mb-0 font-12">Adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-shopping-bag'></i>
-                                            <div>
-                                                <span>Congratulations!
-                                                </span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Hello Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-border-all'></i>
-                                            <div>
-                                                <span>Your order is placed</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Haslina Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-bell bx-tada'></i> <span class="active-status"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- Top Notifications Area -->
-                                <div class="top-notifications-area">
-                                    <!-- Heading -->
-                                    <div class="notifications-heading">
-                                        <div class="heading-title">
-                                            <h6>Notifications</h6>
-                                        </div>
-                                        <span>11</span>
-                                    </div>
-
-                                    <div class="notifications-box" id="notificationsBox">
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-shopping-bag'></i>
-                                            <div>
-                                                <span>Your order is placed</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Haslina Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-dollar-circle'></i>
-                                            <div>
-                                                <span>Your order is Dollar</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-border-all'></i>
-                                            <div>
-                                                <span>Your order is placed</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Haslina Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/bg-img/person_1.jpg" alt=""></button>
-                            <div class="dropdown-menu profile dropdown-menu-right">
-                                <!-- User Profile Area -->
-                                <div class="user-profile-area">
-                                    <a href="#" class="dropdown-item"><i class="bx bx-user font-15" aria-hidden="true"></i> My profile</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15" aria-hidden="true"></i> My wallet</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15" aria-hidden="true"></i> settings</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15" aria-hidden="true"></i> Sign-out</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </header>
 
@@ -272,8 +109,11 @@
                 <div class="content-wrapper">
                     <div class="container-fluid">
                         <div class="card box-margin">
+
                             <div class="card-body">
-                                <div class="shortcode-html">
+                                <!-- <div class="d-flex float-end p-3"> -->
+                                <button class="btn btn-success px-4 py-2" onclick="exportToExcel()">Export Excel</button>
+                                <div class="shortcode-html mt-3">
                                     <!-- Table Striped Rows -->
                                     <div class="container">
                                         <div class="table-responsive">
@@ -283,8 +123,32 @@
                                                         <th>No</th>
                                                         <th>Nama Pengusul</th>
                                                         <th>NIK</th>
-                                                        <th>Disabilitas</th>
-                                                        <th>Program Bansos</th>
+                                                        <th>Kecamatan</th>
+                                                        <th>Kabupaten</th>
+                                                        <th>Status Kelayakan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Data will be populated here -->
+                                                </tbody>
+                                            </table>
+
+                                            <table class="table table-striped d-none" id="responseTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Nama Pengusul</th>
+                                                        <th>NIP</th>
+                                                        <th>Email</th>
+                                                        <th>No Whatsapp</th>
+                                                        <th>Nama Penerima</th>
+                                                        <th>NIK Penerima</th>
+                                                        <th>Kecamatan</th>
+                                                        <th>Kabupaten</th>
+                                                        <th>Alasan</th>
+                                                        <th>Catatan</th>
+                                                        <th>Data Pendukung 1</th>
+                                                        <th>Data Pendukung 2</th>
                                                         <th>Status Kelayakan</th>
                                                     </tr>
                                                 </thead>
@@ -322,6 +186,9 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
 
     <script>
         // Initialize Firebase
@@ -355,18 +222,24 @@
 
                     // Retrieve idRecipient from the response
                     const idRecipient = response.idRecipient;
+                    const idUser = response.idUser;
 
                     // Get recipient data based on idRecipient
                     getDataById('recipients', idRecipient).then(recipientData => {
-                        // Combine response data with related recipient data
-                        proposalData.push({
-                            id: doc.id, // Add response ID to the data
-                            response: response,
-                            recipient: recipientData
-                        });
 
-                        // Render the table row for the current response
-                        renderProposalRow(proposalData.length, response, recipientData, doc.id);
+                        getDataById('users', idUser).then(userData => {
+                            // Combine response data with related recipient data
+                            proposalData.push({
+                                id: doc.id, // Add response ID to the data
+                                response: response,
+                                recipient: recipientData,
+                                user: userData
+                            });
+
+                            // Render the table row for the current response
+                            renderProposalRow(proposalData.length, response, recipientData, doc.id);
+                            renderResponseRow(proposalData.length, response, recipientData, userData, doc.id);
+                        });
                     });
                 });
             }).catch(error => {
@@ -381,20 +254,6 @@
 
             return document.data();
         }
-
-        // function renderResponse(response, recipientData) {
-        //     const tableBody = document.getElementById("responseTableBody");
-        //     const row = document.createElement("tr");
-        //     row.innerHTML = `
-        //             <td>${response.id}</td>
-        //             <td>${recipientData.NAMA}</td>
-        //             <td>${recipientData.NIK}</td>
-        //             <td>${recipientData.KECAMATAN}</td>
-        //             <td>${recipientData.KABUPATEN}</td>
-        //             <td>${response.statusKelayakan ? '<p class="text-success fw-bold fs-11 m-0">Layak</p>' : '<p class="text-danger fw-bold fs-11 m-0">Tidak Layak</p>'}</td>
-        //         `;
-        //     tableBody.appendChild(row);
-        // }
 
         function renderProposalRow(index, response, recipient, id) {
             const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
@@ -419,9 +278,60 @@
             });
         }
 
+        function renderResponseRow(index, response, recipient, user, id) {
+            const proposalTable = document.getElementById('responseTable').getElementsByTagName('tbody')[0];
+            const row = proposalTable.insertRow();
+            // console.log(id);
+            row.innerHTML = `
+                <td>${index}</td>
+                <td>${user.username}</td>
+                <td>${user.nip}</td>
+                <td>${user.email}</td>
+                <td>${user.whatsappNumber}</td>
+                <td>${recipient.nama}</td>
+                <td>${recipient.nik}</td>
+                <td>${recipient.kecamatan}</td>
+                <td>${recipient.kabupaten}</td>
+                <td>${response.alasan}</td>
+                <td>${response.catatan}</td>
+                <td>${response.dataPendukung1Url}</td>
+                <td>${response.dataPendukung2Url}</td>
+            <td>${response.statusKelayakan ? '<p class="text-success fw-bold fs-11 m-0">Layak</p>' : '<p class="text-danger fw-bold fs-11 m-0">Tidak Layak</p>'}</td>
+            `;
+
+            const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
+            detailButton.addEventListener('click', function() {
+                // Redirect to detail.php with proposal ID as parameter
+                window.location.href = `detail-tanggapan.php?id=${id}`;
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             fetchProposalData();
         });
+
+        function exportToExcel() {
+            const proposalTable = document.getElementById('responseTable');
+            const wb = XLSX.utils.table_to_book(proposalTable, {
+                sheet: "Verifikasi"
+            });
+            const wbout = XLSX.write(wb, {
+                bookType: 'xlsx',
+                bookSST: true,
+                type: 'binary'
+            });
+
+            function s2ab(s) {
+                const buf = new ArrayBuffer(s.length);
+                const view = new Uint8Array(buf);
+                for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+                return buf;
+            }
+
+            saveAs(new Blob([s2ab(wbout)], {
+                type: "application/octet-stream"
+            }), 'verifikasi_data.xlsx');
+        }
     </script>
 
 

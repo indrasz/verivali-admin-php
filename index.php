@@ -39,7 +39,7 @@
         <div class="flapt-sidemenu-wrapper">
             <!-- Desktop Logo -->
             <div class="flapt-logo">
-                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                <a href="index.php"><img class="desktop-logo" src="img/verivali-logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/verivali-logo.png alt=" Mobile Logo"></a>
             </div>
 
             <!-- Side Nav -->
@@ -64,7 +64,7 @@
                                 <a href="tanggapan.php">
                                     <div class="d-flex justify-content-center w-100">
                                         <i class='bx bx-file'></i>
-                                        <span>Tanggapan</span>
+                                        <span>Verifikasi</span>
                                     </div>
                                 </a>
                             </li>
@@ -90,7 +90,7 @@
                 <div class="left-side-content-area d-flex align-items-center">
                     <!-- Mobile Logo -->
                     <div class="mobile-logo">
-                        <a href="index.html"><img src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                        <a href="index.php"><img src="img/verivali-logo.png" alt="Mobile Logo"></a>
                     </div>
 
                     <!-- Triggers -->
@@ -103,169 +103,8 @@
                         </div>
                     </div>
 
-                    <!-- Left Side Nav -->
-                    <ul class="left-side-navbar d-flex align-items-center">
-                        <li class="hide-phone app-search">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="bx bx-search-alt"></span>
-                        </li>
-                    </ul>
                 </div>
 
-                <div class="right-side-navbar d-flex align-items-center justify-content-end">
-                    <!-- Mobile Trigger -->
-                    <div class="right-side-trigger" id="rightSideTrigger">
-                        <i class='bx bx-menu-alt-right'></i>
-                    </div>
-
-                    <!-- Top Bar Nav -->
-                    <ul class="right-side-content d-flex align-items-center">
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class='bx bx-world'></i></span></button>
-                            <div class="dropdown-menu language-dropdown dropdown-menu-right">
-                                <div class="user-profile-area">
-                                    <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f1.jpg" alt="Image">
-                                        <span>Ind</span></a>
-                                    <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f2.jpg" alt="Image">
-                                        <span>German</span></a>
-                                    <a href="#" class="dropdown-item mb-15"><img src="img/core-img/f3.jpg" alt="Image">
-                                        <span>Italian</span></a>
-                                    <a href="#" class="dropdown-item"><img src="img/core-img/f4.jpg" alt="Image">
-                                        <span>Russian</span></a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-envelope'></i></button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- Message Area -->
-                                <div class="top-message-area">
-                                    <!-- Heading -->
-                                    <div class="message-heading">
-                                        <div class="heading-title">
-                                            <h6 class="mb-0">All Messages</h6>
-                                        </div>
-                                        <span>10</span>
-                                    </div>
-
-                                    <div class="message-box" id="messageBox">
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-dollar-circle'></i>
-                                            <div>
-                                                <span>Did you know?</span>
-                                                <p class="mb-0 font-12">Adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-shopping-bag'></i>
-                                            <div>
-                                                <span>Congratulations!
-                                                </span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Hello Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-border-all'></i>
-                                            <div>
-                                                <span>Your order is placed</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Haslina Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit.</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-bell bx-tada'></i> <span class="active-status"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- Top Notifications Area -->
-                                <div class="top-notifications-area">
-                                    <!-- Heading -->
-                                    <div class="notifications-heading">
-                                        <div class="heading-title">
-                                            <h6>Notifications</h6>
-                                        </div>
-                                        <span>11</span>
-                                    </div>
-
-                                    <div class="notifications-box" id="notificationsBox">
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-shopping-bag'></i>
-                                            <div>
-                                                <span>Your order is placed</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Haslina Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-dollar-circle'></i>
-                                            <div>
-                                                <span>Your order is Dollar</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-border-all'></i>
-                                            <div>
-                                                <span>Your order is placed</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <i class='bx bx-wallet-alt'></i>
-                                            <div>
-                                                <span>Haslina Obeta</span>
-                                                <p class="mb-0 font-12">Consectetur adipisicing elit. Ipsa, porro!</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/bg-img/person_1.jpg" alt=""></button>
-                            <div class="dropdown-menu profile dropdown-menu-right">
-                                <!-- User Profile Area -->
-                                <div class="user-profile-area">
-                                    <a href="#" class="dropdown-item"><i class="bx bx-user font-15" aria-hidden="true"></i> My profile</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wallet font-15" aria-hidden="true"></i> My wallet</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-wrench font-15" aria-hidden="true"></i> settings</a>
-                                    <a href="#" class="dropdown-item"><i class="bx bx-power-off font-15" aria-hidden="true"></i> Sign-out</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </header>
 
             <!-- Body Content -->
@@ -329,7 +168,7 @@
                                             <div class="col">
                                                 <!-- Title -->
                                                 <h6 class="font-14 text-uppercase">
-                                                    Total Tanggapan
+                                                    Total Verifikasi
                                                 </h6>
                                                 <div class="row align-items-center no-gutters">
                                                     <div class="col-auto">
@@ -398,20 +237,14 @@
     <script src="js/scrool-bar.js"></script>
     <script src="js/todo-list.js"></script>
     <script src="js/default-assets/active.js"></script>
-
-    <!-- Inject JS -->
-    <!-- <script src="js/default-assets/mini-event-calendar.min.js"></script>
-    <script src="js/default-assets/mini-calendar-active.js"></script>
-    <script src="js/default-assets/apexchart.min.js"></script>
-    <script src="js/default-assets/dashboard-active.js"></script> -->
-
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <script>
-        // Initialize Firebase
+        // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCfbnT6teL7jUr2J4Tf0V7Ktz7FFrWTfcY",
             authDomain: "very-vali.firebaseapp.com",
@@ -422,80 +255,71 @@
             appId: "1:976664971480:web:2da9180d52120fcc896fad",
             measurementId: "G-WPK2EXJHMC"
         };
+
+        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        const firestore = firebase.firestore();
 
-        const db = firebase.firestore();
+        var myTimestamp = firebase.firestore.FieldValue.serverTimestamp();
 
-        function displayData() {
-            // Reference to the collections
-            const proposalsCollection = db.collection('proposals');
-            const responsesCollection = db.collection('responses');
-            const recipientsCollection = db.collection('recipients');
+        console.log("myTimestamp", myTimestamp);
 
-            // Get total number of documents in each collection
-            let totalProposals, totalResponses, totalRecipients;
-            proposalsCollection.get().then(querySnapshot => {
-                totalProposals = querySnapshot.size;
-                updateTotalProposals(totalProposals);
-            });
-            responsesCollection.get().then(querySnapshot => {
-                totalResponses = querySnapshot.size;
-                updateTotalResponses(totalResponses);
-            });
-            recipientsCollection.get().then(querySnapshot => {
-                totalRecipients = querySnapshot.size;
-                updateTotalRecipients(totalRecipients);
-            });
+        var settings = {
+            timestampsInSnapshots: true
+        }; // force Timestamp instead of Date
+        firestore.settings(settings);
 
-            // Get data per day for proposals and responses
-            getDataPerDay('proposals', function(proposalData) {
-                updateProposalChart(proposalData);
-            });
-            getDataPerDay('responses', function(responseData) {
-                updateResponseChart(responseData);
-            });
-        }
-
-        function getDataPerDay(collectionName, callback) {
-            const collection = db.collection(collectionName);
+        // Function to get data per day
+        async function getDataPerDay(collectionName) {
+            const collection = firestore.collection(collectionName);
+            const snapshot = await collection.get();
             const dataPerDay = {};
 
-            collection.onSnapshot(querySnapshot => {
-                querySnapshot.forEach(doc => {
-                    const createTime = doc.data().createTime;
 
-                    console.log(createTime);
-                    if (createTime) {
-                        const timestamp = createTime.toDate().toISOString().split('T')[0];
-                        dataPerDay[timestamp] = (dataPerDay[timestamp] || 0) + 1;
-                    }
+            snapshot.forEach(doc => {
+                // console.log(doc);
+                const dataTime = doc.data({
+                    serverTimestamps: 'estimate'
                 });
-                callback(dataPerDay);
+
+                console.log("Data Time", dataTime);
+                // console.log("Time: ", dataTime.timestampField.toDate());
+
+                const timestamp = moment(doc.dateCreated).format('YYYY-MM-DD');
+                if (dataPerDay[timestamp]) {
+                    dataPerDay[timestamp]++;
+                } else {
+                    dataPerDay[timestamp] = 1;
+                }
             });
+
+            return dataPerDay;
         }
 
+        async function loadData() {
+            const proposalsCollection = firestore.collection('proposals');
+            const responsesCollection = firestore.collection('responses');
+            const recipientsCollection = firestore.collection('recipients');
 
-        function updateTotalProposals(total) {
-            document.getElementById('totalProposals').innerText = total;
-        }
+            const totalProposals = (await proposalsCollection.get()).size;
+            const totalResponses = (await responsesCollection.get()).size;
+            const totalRecipients = (await recipientsCollection.get()).size;
 
-        function updateTotalResponses(total) {
-            document.getElementById('totalResponses').innerText = total;
-        }
+            document.getElementById('totalProposals').innerText = totalProposals;
+            document.getElementById('totalResponses').innerText = totalResponses;
+            document.getElementById('totalRecipients').innerText = totalRecipients;
 
-        function updateTotalRecipients(total) {
-            document.getElementById('totalRecipients').innerText = total;
-        }
+            const proposalData = await getDataPerDay('proposals');
+            const responseData = await getDataPerDay('responses');
 
-        function updateProposalChart(dailyProposalData) {
-            // Update proposal chart
-            var ctx = document.getElementById('proposalPieChart').getContext('2d');
-            var proposalPieChart = new Chart(ctx, {
+            // Data total proposal dan total response
+            const ctxPie = document.getElementById('proposalPieChart').getContext('2d');
+            new Chart(ctxPie, {
                 type: 'pie',
                 data: {
-                    labels: ['Total Pengusul', 'Total Tanggapan'],
+                    labels: ['Total Pengusul', 'Total Verifikasi'],
                     datasets: [{
-                        label: 'Pengusul vs Tanggapan',
+                        label: 'Pengusulan vs Verifikasi',
                         data: [totalProposals, totalResponses],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.6)', // Merah
@@ -510,42 +334,49 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false
-                }
-            });
-        }
-
-        function updateResponseChart(dailyResponseData) {
-            // Update response chart
-            var ctx = document.getElementById('dailyDataBarChart').getContext('2d');
-            var dailyDataBarChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: Object.keys(dailyResponseData), // Menggunakan kunci tanggal sebagai label
-                    datasets: [{
-                        label: 'Proposal',
-                        data: Object.values(dailyResponseData), // Mengambil nilai proposal
-                        backgroundColor: 'rgba(255, 99, 132, 0.6)', // Warna merah
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
                     maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
+                    // scales: {
+                    //     y: {
+                    //         beginAtZero: true
+                    //     }
+                    // }
                 }
             });
+
+            // Data per hari untuk proposal dan response (contoh)
+            // const ctxBar = document.getElementById('dailyDataBarChart').getContext('2d');
+            // new Chart(ctxBar, {
+            //     type: 'bar',
+            //     data: {
+            //         labels: Object.keys(proposalData), // Menggunakan kunci tanggal sebagai label
+            //         datasets: [{
+            //             label: 'Proposal',
+            //             data: Object.values(proposalData), // Mengambil nilai proposal
+            //             backgroundColor: 'rgba(255, 99, 132, 0.6)', // Warna merah
+            //             borderColor: 'rgba(255, 99, 132, 1)',
+            //             borderWidth: 1
+            //         }, {
+            //             label: 'Response',
+            //             data: Object.values(responseData), // Mengambil nilai response
+            //             backgroundColor: 'rgba(54, 162, 235, 0.6)', // Warna biru
+            //             borderColor: 'rgba(54, 162, 235, 1)',
+            //             borderWidth: 1
+            //         }]
+            //     },
+            //     options: {
+            //         responsive: true,
+            //         maintainAspectRatio: false,
+            //         scales: {
+            //             y: {
+            //                 beginAtZero: true
+            //             }
+            //         }
+            //     }
+            // });
         }
 
-        // Call displayData function to start fetching and updating data
-        displayData();
+        // Load data and create charts on page load
+        document.addEventListener('DOMContentLoaded', loadData);
     </script>
 
 
