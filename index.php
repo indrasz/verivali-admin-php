@@ -39,7 +39,7 @@
         <div class="flapt-sidemenu-wrapper">
             <!-- Desktop Logo -->
             <div class="flapt-logo">
-                <a href="index.php"><img class="desktop-logo" src="img/verivali-logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/verivali-logo.png alt=" Mobile Logo"></a>
+                <a href="index.php" class=""><img class="" style="max-height:100%;" src="img/verivali-logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/verivali-logo.png alt=" Mobile Logo"></a>
             </div>
 
             <!-- Side Nav -->
@@ -207,11 +207,25 @@
                                 <div class="card bg-boxshadow full-height">
                                     <div class="card-header bg-transparent d-flex align-items-center justify-content-between">
                                         <div class="widgets-card-title">
-                                            <h5 class="card-title mb-0">Total Pendataan Harian</h5>
+                                            <h5 class="card-title mb-0">Daftar pengguna aplikasi</h5>
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <canvas id="dailyDataBarChart" width="400" height="200"></canvas>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped" id="proposalTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Username</th>
+                                                        <th>NIP</th>
+                                                        <th>Email</th>
+                                                        <th>No Whatsapp</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Data will be populated here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -258,6 +272,7 @@
 
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
         const firestore = firebase.firestore();
 
         var myTimestamp = firebase.firestore.FieldValue.serverTimestamp();
@@ -303,7 +318,7 @@
 
             const totalProposals = (await proposalsCollection.get()).size;
             const totalResponses = (await responsesCollection.get()).size;
-            const totalRecipients = (await recipientsCollection.get()).size;
+            const totalRecipients = (await totalProposals + totalResponses);
 
             document.getElementById('totalProposals').innerText = totalProposals;
             document.getElementById('totalResponses').innerText = totalResponses;
@@ -335,48 +350,67 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    // scales: {
-                    //     y: {
-                    //         beginAtZero: true
-                    //     }
-                    // }
                 }
             });
 
-            // Data per hari untuk proposal dan response (contoh)
-            // const ctxBar = document.getElementById('dailyDataBarChart').getContext('2d');
-            // new Chart(ctxBar, {
-            //     type: 'bar',
-            //     data: {
-            //         labels: Object.keys(proposalData), // Menggunakan kunci tanggal sebagai label
-            //         datasets: [{
-            //             label: 'Proposal',
-            //             data: Object.values(proposalData), // Mengambil nilai proposal
-            //             backgroundColor: 'rgba(255, 99, 132, 0.6)', // Warna merah
-            //             borderColor: 'rgba(255, 99, 132, 1)',
-            //             borderWidth: 1
-            //         }, {
-            //             label: 'Response',
-            //             data: Object.values(responseData), // Mengambil nilai response
-            //             backgroundColor: 'rgba(54, 162, 235, 0.6)', // Warna biru
-            //             borderColor: 'rgba(54, 162, 235, 1)',
-            //             borderWidth: 1
-            //         }]
-            //     },
-            //     options: {
-            //         responsive: true,
-            //         maintainAspectRatio: false,
-            //         scales: {
-            //             y: {
-            //                 beginAtZero: true
-            //             }
-            //         }
-            //     }
-            // });
+        }
+
+        function fetchProposalData() {
+            const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
+            proposalTable.innerHTML = ''; // Clear previous data
+
+            // Reference to the responses collection
+            const collection = db.collection('users');
+
+            // Get all responses
+            collection.get().then(querySnapshot => {
+                let proposalData = [];
+                querySnapshot.forEach(doc => {
+                    // Convert Firestore document to JavaScript object
+                    const user = doc.data();
+
+                    // Render the table row for the current response
+                    renderProposalRow(proposalData.length, user, doc.id);
+                    // renderResponseRow(proposalData.length, response, recipientData, userData, doc.id);
+
+                });
+            }).catch(error => {
+                console.error("Error fetching response data: ", error);
+            });
+        }
+
+        function renderProposalRow(index, user, id) {
+            const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
+            const row = proposalTable.insertRow();
+            // console.log(id);
+            row.innerHTML = `
+                <td>${user.username}</td>
+                <td>${user.nip}</td>
+                <td>${user.email}</td>
+                <td>${user.whatsappNumber}</td>
+            `;
+
+            const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
+            detailButton.addEventListener('click', function() {
+                // Redirect to detail.php with proposal ID as parameter
+                window.location.href = `detail-tanggapan.php?id=${id}`;
+            });
+
+            const deleteButton = row.querySelector(`button.delete-button[data-proposal-id="${id}"]`);
+            deleteButton.addEventListener('click', function() {
+                // Call deleteProposal function and pass the row to be removed
+                deleteProposal(id, row);
+            });
         }
 
         // Load data and create charts on page load
-        document.addEventListener('DOMContentLoaded', loadData);
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchProposalData();
+            loadData();
+        });
+
+
+        // document.addEventListener('DOMContentLoaded', loadData);
     </script>
 
 

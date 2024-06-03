@@ -255,6 +255,15 @@
             return document.data();
         }
 
+        async function deleteProposal(responseId, row) {
+            try {
+                await db.collection('responses').doc(responseId).delete();
+                row.remove();
+            } catch (error) {
+                console.error("Error deleting response: ", error);
+            }
+        }
+
         function renderProposalRow(index, response, recipient, id) {
             const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
             const row = proposalTable.insertRow();
@@ -268,6 +277,7 @@
             <td>${response.statusKelayakan ? '<p class="text-success fw-bold fs-11 m-0">Layak</p>' : '<p class="text-danger fw-bold fs-11 m-0">Tidak Layak</p>'}</td>
            <td>
                     <button class="btn btn-primary p-2 detail-button" data-proposal-id="${id}">Detail</button>
+                    <button class="btn btn-danger p-2 delete-button" data-proposal-id="${id}">Delete</button>
                 </td>
             `;
 
@@ -275,6 +285,12 @@
             detailButton.addEventListener('click', function() {
                 // Redirect to detail.php with proposal ID as parameter
                 window.location.href = `detail-tanggapan.php?id=${id}`;
+            });
+
+            const deleteButton = row.querySelector(`button.delete-button[data-proposal-id="${id}"]`);
+            deleteButton.addEventListener('click', function() {
+                // Call deleteProposal function and pass the row to be removed
+                deleteProposal(id, row);
             });
         }
 

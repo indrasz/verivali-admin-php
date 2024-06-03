@@ -138,24 +138,6 @@
                                                         </tbody>
                                                     </table>
 
-                                                    <!-- <table class="table table-striped" id="proposalUserTable">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>No</th>
-                                                                <th>Nama Pengusul</th>
-                                                                <th>NIK</th>
-                                                                <th>Disabilitas</th>
-                                                                <th>Program Bansos</th>
-                                                                <th>Status DTKS</th>
-                                                                <th></th>
-                                                                Tambahkan kolom-kolom lain sesuai kebutuhan
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            Data Proposal akan dimasukkan di sini
-                                                        </tbody>
-                                                    </table> -->
-
                                                     <table class="table table-striped d-none" id="individuData">
                                                         <thead>
                                                             <tr>
@@ -191,6 +173,10 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>No</th>
+                                                                <th>Nama Pengusul</th>
+                                                                <th>NIP</th>
+                                                                <th>Email</th>
+                                                                <th>No Whatsapp</th>
                                                                 <th>Apakah memiliki tempat berteduh tetap sehari hari?</th>
                                                                 <th>Apakah kepala keluarga atau pengurus keluarga masih berkerja?</th>
                                                                 <th>Apakah pengeluaran pangan lebih besar (> 70%) dari total pengeluaran?</th>
@@ -213,7 +199,11 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>No</th>
-                                                                <th>Pengusul</th>
+                                                                <th>Nama Pengusul</th>
+                                                                <th>NIP</th>
+                                                                <th>Email</th>
+                                                                <th>No Whatsapp</th>
+                                                                <th>Nama Penerima</th>
                                                                 <th>NIK</th>
                                                                 <th>Disabilitas</th>
                                                                 <th>Program Bansos</th>
@@ -282,6 +272,7 @@
 
         const db = firebase.firestore();
 
+        // fungsi untuk mengambil data proposal dari Firestore
         function fetchProposalData() {
             const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
             proposalTable.innerHTML = ''; // Clear previous data
@@ -348,52 +339,48 @@
             return document.data();
         }
 
+        // Function to delete a proposal from Firestore and remove the row from the table
+        async function deleteProposal(proposalId, row) {
+            try {
+                await db.collection('proposals').doc(proposalId).delete();
+                row.remove();
+            } catch (error) {
+                console.error("Error deleting proposal: ", error);
+            }
+        }
+
         // Function to render a table row for a proposal
         function renderProposalRow(index, proposal, recipient, individual, survey, id) {
             const proposalTable = document.getElementById('proposalTable').getElementsByTagName('tbody')[0];
             const row = proposalTable.insertRow();
-            // console.log(id);
+
             row.innerHTML = `
-                <td>${index}</td>
-                <td>${recipient.nama}</td>
-                <td>${recipient.nik}</td>
-                <td>${proposal.disabilitas}</td>
-                <td>${proposal.programBansos}</td>
-                <td>${recipient['status_dtks']}</td>
-                <td>
-                    <button class="btn btn-primary p-2 detail-button" data-proposal-id="${id}">Detail</button>
-                </td>
-                `;
+            <td>${index}</td>
+            <td>${recipient.nama}</td>
+            <td>${recipient.nik}</td>
+            <td>${proposal.disabilitas}</td>
+            <td>${proposal.programBansos}</td>
+            <td>${recipient['status_dtks']}</td>
+            <td>
+                <button class="btn btn-primary p-2 detail-button" data-proposal-id="${id}">Detail</button>
+                <button class="btn btn-danger p-2 delete-button" data-proposal-id="${id}">Delete</button>
+            </td>
+            `;
+
             // Add event listener for detail button
-            const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
+            const detailButton = row.querySelector(`button.detail-button[data-proposal-id="${id}"]`);
             detailButton.addEventListener('click', function() {
                 // Redirect to detail.php with proposal ID as parameter
                 window.location.href = `detail.php?id=${id}`;
             });
-        }
 
-        // function renderProposalUserRow(index, proposal, recipient, individual, survey, id) {
-        //     const proposalTable = document.getElementById('proposalUserTable').getElementsByTagName('tbody')[0];
-        //     const row = proposalTable.insertRow();
-        //     // console.log(id);
-        //     row.innerHTML = `
-        //         <td>${index}</td>
-        //         <td>${recipient.nama}</td>
-        //         <td>${recipient.nik}</td>
-        //         <td>${proposal.disabilitas}</td>
-        //         <td>${proposal.programBansos}</td>
-        //         <td>${recipient['status_dtks']}</td>
-        //         <td>
-        //             <button class="btn btn-primary p-2 detail-button" data-proposal-id="${id}">Detail</button>
-        //         </td>
-        //         `;
-        //     // Add event listener for detail button
-        //     const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
-        //     detailButton.addEventListener('click', function() {
-        //         // Redirect to detail.php with proposal ID as parameter
-        //         window.location.href = `detail.php?id=${id}`;
-        //     });
-        // }
+            // Add event listener for delete button
+            const deleteButton = row.querySelector(`button.delete-button[data-proposal-id="${id}"]`);
+            deleteButton.addEventListener('click', function() {
+                // Call deleteProposal function and pass the row to be removed
+                deleteProposal(id, row);
+            });
+        }
 
         function renderIndividualRow(index, individual, user) {
             const proposalTable = document.getElementById('individuData').getElementsByTagName('tbody')[0];
