@@ -389,18 +389,6 @@
                 <td>${user.email}</td>
                 <td>${user.whatsappNumber}</td>
             `;
-
-            const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
-            detailButton.addEventListener('click', function() {
-                // Redirect to detail.php with proposal ID as parameter
-                window.location.href = `detail-tanggapan.php?id=${id}`;
-            });
-
-            const deleteButton = row.querySelector(`button.delete-button[data-proposal-id="${id}"]`);
-            deleteButton.addEventListener('click', function() {
-                // Call deleteProposal function and pass the row to be removed
-                deleteProposal(id, row);
-            });
         }
 
         // Load data and create charts on page load

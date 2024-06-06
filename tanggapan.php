@@ -315,11 +315,6 @@
             <td>${response.statusKelayakan ? '<p class="text-success fw-bold fs-11 m-0">Layak</p>' : '<p class="text-danger fw-bold fs-11 m-0">Tidak Layak</p>'}</td>
             `;
 
-            const detailButton = row.querySelector(`button[data-proposal-id="${id}"]`);
-            detailButton.addEventListener('click', function() {
-                // Redirect to detail.php with proposal ID as parameter
-                window.location.href = `detail-tanggapan.php?id=${id}`;
-            });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
